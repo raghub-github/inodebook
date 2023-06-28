@@ -23,10 +23,13 @@ const Login = (props) => {
     });
     const json = await response.json();
     if (json.success) {
-      localStorage.setItem("token", json.authtoken);
+      localStorage.setItem("auth-token", json.authToken);
+      console.log(json.authToken)
+      props.showAlert("logged In Successfully", "success");
       navigate("/");
     } else {
-      alert("Invalid credentials");
+      props.showAlert("Invalid credentials", "danger")
+
     }
   };
   const onChange = (e) => {
