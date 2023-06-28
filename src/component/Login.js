@@ -15,8 +15,6 @@ const Login = (props) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "auth-token":
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ5YWFkNTlhZGEzMGJlNzEzZTM4Zjg4In0sImlhdCI6MTY4Nzg1ODY1Nn0.bBnjzG4aSJjbK6Ttyrto2aG-FxcI_BKLn-Ofxl9fP1Y",
       },
       body: JSON.stringify({
         email: credentials.email,
@@ -24,7 +22,6 @@ const Login = (props) => {
       }),
     });
     const json = await response.json();
-    console.log(json);
     if (json.success) {
       localStorage.setItem("token", json.authtoken);
       navigate("/");
