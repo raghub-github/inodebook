@@ -22,14 +22,18 @@ const Addnote = (props) => {
   };
 
   return (
-    <div className="container my-3">
-      <h2 className="App">Add notes</h2>
+    <div
+      className="container my-3"
+      style={{ backgroundColor: "rgb(16 15 29)", color: "white", height:"24rem", boxSizing:"border-box", borderRadius:"15px"}}
+    >
+      <h2 className="App mt-3" style={{}}>Add notes</h2>
       <form className="my-3">
         <div className="mb-3">
           <label htmlFor="title" className="form-label">
             Title
           </label>
           <input
+            style={{ backgroundColor: "rgb(13 0 23)", color: "white" }}
             onChange={onChange}
             value={note.title}
             minLength={5}
@@ -44,9 +48,10 @@ const Addnote = (props) => {
         </div>
         <div className="mb-3">
           <label htmlFor="description" className="form-label">
-            description
+            Description
           </label>
           <input
+          style={{ backgroundColor: "rgb(13 0 23)", color: "white" }}
             onChange={onChange}
             value={note.description}
             minLength={5}
@@ -60,9 +65,10 @@ const Addnote = (props) => {
         </div>
         <div className="mb-3">
           <label htmlFor="tag" className="form-label">
-            tag
+            Tag
           </label>
           <input
+          style={{ backgroundColor: "rgb(13 0 23)", color: "white" }}
             onChange={onChange}
             value={note.tag}
             minLength={5}

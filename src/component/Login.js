@@ -42,6 +42,7 @@ const Login = (props) => {
             Email address
           </label>
           <input
+          style={{ backgroundColor: "rgb(13 0 23)", color: "white" }}
             type="email"
             value={credentials.email}
             className="form-control"
@@ -59,6 +60,7 @@ const Login = (props) => {
             Password
           </label>
           <input
+          style={{ backgroundColor: "rgb(13 0 23)", color: "white" }}
             type="password"
             value={credentials.password}
             name="password"

@@ -62,9 +62,10 @@ const Notes = (props) => {
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
+        
       >
-        <div className="modal-dialog">
-          <div className="modal-content">
+        <div className="modal-dialog" >
+          <div className="modal-content" >
             <div className="modal-header">
               <h5 className="modal-title" id="exampleModalLabel">
                 Edit Note
