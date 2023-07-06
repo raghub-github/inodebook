@@ -7,14 +7,14 @@ const Noteitem = (props) => {
   const { deleteNote } = context;
   return (
     <>
-      <div className="col-md-3 ">
-        <div className="card my-3 App">
-          <div className="card-body ">
+      <div className="col-md-3 " >
+        <div className="card my-3 App" >
+          <div className="card-body " style={{ backgroundColor: "rgb(13 0 23)", color: "white" }}>
             <div className="d-flex align-item-center justify-content-around">
               <h5 className="card-title">{note.title}</h5>
               <i
                 className="fa-solid fa-pen-to-square mx-2"
-                style={{ color: "#001d57" }}
+                style={{ color: "rgb(0 177 212)" }}
                 onClick={() => {
                   updateNote(note);
                 }}
@@ -25,7 +25,7 @@ const Noteitem = (props) => {
                   deleteNote(note._id);
                   props.showAlert("deleted Successfully", "info");
                 }}
-                style={{ color: "#4d0034" }}
+                style={{ color: "rgb(196 0 0)" }}
               ></i>
             </div>
             <p className="card-text">{note.description}</p>
