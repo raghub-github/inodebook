@@ -28,12 +28,12 @@ const Signup = (props) => {
     const json = await response.json();
     console.log(json);
     if (json.success) {
-      localStorage.setItem("token", json.authtoken);
-      navigate("/");
+      localStorage.setItem("authToken", json.authToken);
       props.showAlert("Account Created Successfully", "success");
+      navigate("/");
     } else {
       console.log("success = ", json.success);
-      props.showAlert("Invalid Details", "danger")
+      props.showAlert("Invalid Details", "danger");
     }
   };
   const onChange = (e) => {
@@ -41,7 +41,8 @@ const Signup = (props) => {
   };
 
   return (
-    <div className="container">
+    <div className="container mt-3">
+      <h2 className="App">Create an account to use iNotebook</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">

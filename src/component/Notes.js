@@ -125,13 +125,6 @@ const Notes = (props) => {
                     placeholder="Tag"
                   />
                 </div>
-                {/* <button
-                  type="submit"
-                  onClick={handleClick}
-                  className="btn btn-primary"
-                >
-                  Add Note
-                </button> */}
               </form>
             </div>
             <div className="modal-footer">

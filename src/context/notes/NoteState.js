@@ -3,6 +3,7 @@ import { useState } from "react";
 
 const NoteState = (props) => {
   const host = "http://localhost:5000";
+  // const host = process.env.REACT_APP_HOST
   const initialNotes = [];
   const [notes, setNotes] = useState(initialNotes);
 
@@ -14,7 +15,6 @@ const NoteState = (props) => {
       headers: {
         "Content-Type": "application/json",
         "auth-token": localStorage.getItem("authToken"),
-        // "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ5YWFkNTlhZGEzMGJlNzEzZTM4Zjg4In0sImlhdCI6MTY4Nzk1MzUwMX0.HpmDGmQYII1xwoHeJIVTsKZG3jeOrZGUtIDIMRJNX60",
       },
     });
     const json = await response.json();
@@ -28,7 +28,6 @@ const NoteState = (props) => {
       headers: {
         "Content-Type": "application/json",
         "auth-token": localStorage.getItem("authToken"),
-        // "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ5YWFkNTlhZGEzMGJlNzEzZTM4Zjg4In0sImlhdCI6MTY4Nzk1MzUwMX0.HpmDGmQYII1xwoHeJIVTsKZG3jeOrZGUtIDIMRJNX60",
       },
       body: JSON.stringify({ title, description, tag }),
     });
@@ -43,11 +42,10 @@ const NoteState = (props) => {
       headers: {
         "Content-Type": "application/json",
         "auth-token": localStorage.getItem("authToken"),
-        // "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ5YWFkNTlhZGEzMGJlNzEzZTM4Zjg4In0sImlhdCI6MTY4Nzk1MzUwMX0.HpmDGmQYII1xwoHeJIVTsKZG3jeOrZGUtIDIMRJNX60",
       },
     });
     const json = response.json();
-    console.log(json)
+    console.log(json);
     const newNotes = notes.filter((note) => {
       return note._id !== id;
     });
@@ -62,7 +60,6 @@ const NoteState = (props) => {
       headers: {
         "Content-Type": "application/json",
         "auth-token": localStorage.getItem("authToken"),
-        // "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ5YWFkNTlhZGEzMGJlNzEzZTM4Zjg4In0sImlhdCI6MTY4Nzk1MzUwMX0.HpmDGmQYII1xwoHeJIVTsKZG3jeOrZGUtIDIMRJNX60",
       },
       body: JSON.stringify({ title, description, tag }),
     });
