@@ -7,9 +7,12 @@ const Noteitem = (props) => {
   const { deleteNote } = context;
   return (
     <>
-      <div className="col-md-3 " >
-        <div className="card my-3 App" >
-          <div className="card-body " style={{ backgroundColor: "rgb(13 0 23)", color: "white" }}>
+      <div className="col-md-3 ">
+        <div className="card my-3 App">
+          <div
+            className="card-body "
+            style={{ backgroundColor: "rgb(13 0 23)", color: "white" }}
+          >
             <div className="d-flex align-item-center justify-content-around">
               <h5 className="card-title">{note.title}</h5>
               <i

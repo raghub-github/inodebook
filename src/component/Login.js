@@ -27,7 +27,7 @@ const Login = (props) => {
       props.showAlert("logged In Successfully", "success");
       navigate("/");
     } else {
-      props.showAlert("Invalid credentials", "danger")
+      props.showAlert("Invalid credentials", "danger");
     }
   };
   const onChange = (e) => {
@@ -42,7 +42,7 @@ const Login = (props) => {
             Email address
           </label>
           <input
-          style={{ backgroundColor: "rgb(13 0 23)", color: "white" }}
+            style={{ backgroundColor: "rgb(13 0 23)", color: "white" }}
             type="email"
             value={credentials.email}
             className="form-control"
@@ -60,7 +60,7 @@ const Login = (props) => {
             Password
           </label>
           <input
-          style={{ backgroundColor: "rgb(13 0 23)", color: "white" }}
+            style={{ backgroundColor: "rgb(13 0 23)", color: "white" }}
             type="password"
             value={credentials.password}
             name="password"

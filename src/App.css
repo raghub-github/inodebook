@@ -1,7 +1,7 @@
-body{
+body {
   background-color: rgb(6, 0, 23);
   color: white;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .App {
@@ -49,4 +49,3 @@ i {
 i:hover {
   opacity: 0.7;
 }
-

@@ -62,10 +62,12 @@ const Notes = (props) => {
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
-        
       >
-        <div className="modal-dialog"  >
-          <div className="modal-content" style={{ backgroundColor: "rgb(0 17 17)", color: "white" }}>
+        <div className="modal-dialog">
+          <div
+            className="modal-content"
+            style={{ backgroundColor: "rgb(0 17 17)", color: "white" }}
+          >
             <div className="modal-header">
               <h5 className="modal-title" id="exampleModalLabel">
                 Edit Note
@@ -84,7 +86,10 @@ const Notes = (props) => {
                     Title
                   </label>
                   <input
-                  style={{ backgroundColor: "rgb(0 1 12 / 53%)", color: "white" }}
+                    style={{
+                      backgroundColor: "rgb(0 1 12 / 53%)",
+                      color: "white",
+                    }}
                     value={note.etitle}
                     minLength={5}
                     required
@@ -102,7 +107,10 @@ const Notes = (props) => {
                     description
                   </label>
                   <input
-                  style={{ backgroundColor: "rgb(0 1 12 / 53%)", color: "white" }}
+                    style={{
+                      backgroundColor: "rgb(0 1 12 / 53%)",
+                      color: "white",
+                    }}
                     value={note.edescription}
                     minLength={5}
                     required
@@ -119,7 +127,10 @@ const Notes = (props) => {
                     tag
                   </label>
                   <input
-                  style={{ backgroundColor: "rgb(0 1 12 / 53%)", color: "white" }}
+                    style={{
+                      backgroundColor: "rgb(0 1 12 / 53%)",
+                      color: "white",
+                    }}
                     value={note.etag}
                     onChange={onChange}
                     type="text"
