@@ -36,9 +36,11 @@ const Signup = (props) => {
       props.showAlert("Invalid Details", "danger");
     }
   };
+
   const onChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
+
 
   return (
     <div className="container mt-3">
@@ -49,6 +51,7 @@ const Signup = (props) => {
             Name
           </label>
           <input
+            style={{ backgroundColor: "rgb(13 0 23)", color: "white" }}
             type="text"
             required
             name="name"
@@ -63,6 +66,7 @@ const Signup = (props) => {
             Email address
           </label>
           <input
+            style={{ backgroundColor: "rgb(13 0 23)", color: "white" }}
             type="email"
             required
             name="email"
@@ -81,6 +85,7 @@ const Signup = (props) => {
             Password
           </label>
           <input
+            style={{ backgroundColor: "rgb(13 0 23)", color: "white" }}
             type="password"
             required
             minLength={5}
@@ -95,6 +100,7 @@ const Signup = (props) => {
             Confirm Password
           </label>
           <input
+            style={{ backgroundColor: "rgb(13 0 23)", color: "white" }}
             type="password"
             required
             minLength={5}
@@ -104,7 +110,10 @@ const Signup = (props) => {
             id="cpassword"
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button
+          type="submit"
+          className="btn btn-primary"
+        >
           Signup
         </button>
       </form>

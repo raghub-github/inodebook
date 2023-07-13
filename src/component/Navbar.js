@@ -53,14 +53,14 @@ const Navbar = () => {
             <form className="d-flex">
               <Link
                 to="/login"
-                className="btn btn-outline-primary mx-3"
+                className="btn btn-primary mx-3"
                 role="button"
               >
                 Login
               </Link>
               <Link
                 to="/signup"
-                className="btn btn-outline-primary "
+                className="btn btn-primary "
                 role="button"
               >
                 Signup
