@@ -22,6 +22,7 @@ router.post(
   // If there are error-> return a bad request and the error
   async (req, res) => {
     let success = false;
+    console.log("user created", req, res);
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ success, errors: errors.array() });
